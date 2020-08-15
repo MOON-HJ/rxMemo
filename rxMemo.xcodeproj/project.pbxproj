@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		73215E3124E22FC20063591C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3024E22FC20063591C /* AppDelegate.swift */; };
 		73215E3324E22FC20063591C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3224E22FC20063591C /* SceneDelegate.swift */; };
-		73215E3524E22FC20063591C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3424E22FC20063591C /* ViewController.swift */; };
 		73215E3824E22FC20063591C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3624E22FC20063591C /* Main.storyboard */; };
 		73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */; };
 		73215E3D24E22FC40063591C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3C24E22FC40063591C /* Assets.xcassets */; };
@@ -23,7 +22,6 @@
 		73215E2D24E22FC20063591C /* rxMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rxMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73215E3024E22FC20063591C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73215E3224E22FC20063591C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		73215E3424E22FC20063591C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		73215E3724E22FC20063591C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		73215E3A24E22FC20063591C /* rxMemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = rxMemo.xcdatamodel; sourceTree = "<group>"; };
 		73215E3C24E22FC40063591C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,16 +63,55 @@
 		73215E2F24E22FC20063591C /* rxMemo */ = {
 			isa = PBXGroup;
 			children = (
+				73C04E8024E8148000A197EA /* Scene */,
+				73C04E7F24E8147600A197EA /* Service */,
+				73C04E7E24E8146700A197EA /* ViewModel */,
+				73C04E7D24E8146000A197EA /* ViewController */,
+				73C04E7C24E8145600A197EA /* Model */,
 				73215E3024E22FC20063591C /* AppDelegate.swift */,
 				73215E3224E22FC20063591C /* SceneDelegate.swift */,
-				73215E3424E22FC20063591C /* ViewController.swift */,
-				73215E3624E22FC20063591C /* Main.storyboard */,
 				73215E3C24E22FC40063591C /* Assets.xcassets */,
-				73215E3E24E22FC40063591C /* LaunchScreen.storyboard */,
 				73215E4124E22FC40063591C /* Info.plist */,
 				73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */,
 			);
 			path = rxMemo;
+			sourceTree = "<group>";
+		};
+		73C04E7C24E8145600A197EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		73C04E7D24E8146000A197EA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				73215E3624E22FC20063591C /* Main.storyboard */,
+				73215E3E24E22FC40063591C /* LaunchScreen.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		73C04E7E24E8146700A197EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		73C04E7F24E8147600A197EA /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		73C04E8024E8148000A197EA /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		8070F9A529727F9A7DB57094 /* Frameworks */ = {
@@ -91,7 +128,6 @@
 				5BF8357D65783B3855401EC6 /* Pods-rxMemo.debug.xcconfig */,
 				025F8218DD040F17B0B2ED48 /* Pods-rxMemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,7 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73215E3524E22FC20063591C /* ViewController.swift in Sources */,
 				73215E3124E22FC20063591C /* AppDelegate.swift in Sources */,
 				73215E3324E22FC20063591C /* SceneDelegate.swift in Sources */,
 				73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */,
