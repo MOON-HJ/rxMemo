@@ -13,8 +13,10 @@
 		73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */; };
 		73215E3D24E22FC40063591C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3C24E22FC40063591C /* Assets.xcassets */; };
 		73215E4024E22FC40063591C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3E24E22FC40063591C /* LaunchScreen.storyboard */; };
+		7357772F2510476C00EAC3C0 /* Pods_rxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */; };
+		7357773625104C9F00EAC3C0 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357773525104C9F00EAC3C0 /* MemoryStorage.swift */; };
 		737B1A4E251044FF001812D8 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1A4D251044FF001812D8 /* Memo.swift */; };
-		BCD629275BB0DDEE32D1EA78 /* Pods_rxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */; };
+		737B1A502510460C001812D8 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1A4F2510460C001812D8 /* MemoStorageType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,9 @@
 		73215E3C24E22FC40063591C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73215E3F24E22FC40063591C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73215E4124E22FC40063591C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7357773525104C9F00EAC3C0 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
 		737B1A4D251044FF001812D8 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		737B1A4F2510460C001812D8 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 		8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -37,7 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCD629275BB0DDEE32D1EA78 /* Pods_rxMemo.framework in Frameworks */,
+				7357772F2510476C00EAC3C0 /* Pods_rxMemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +78,25 @@
 				73215E3224E22FC20063591C /* SceneDelegate.swift */,
 				73215E3C24E22FC40063591C /* Assets.xcassets */,
 				73215E4124E22FC40063591C /* Info.plist */,
-				73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */,
 			);
 			path = rxMemo;
+			sourceTree = "<group>";
+		};
+		7357773225104C6900EAC3C0 /* MemoStorage */ = {
+			isa = PBXGroup;
+			children = (
+				7357773325104C7300EAC3C0 /* CoreDataStorage */,
+				7357773525104C9F00EAC3C0 /* MemoryStorage.swift */,
+			);
+			path = MemoStorage;
+			sourceTree = "<group>";
+		};
+		7357773325104C7300EAC3C0 /* CoreDataStorage */ = {
+			isa = PBXGroup;
+			children = (
+				73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */,
+			);
+			path = CoreDataStorage;
 			sourceTree = "<group>";
 		};
 		73C04E7C24E8145600A197EA /* Model */ = {
@@ -106,6 +126,8 @@
 		73C04E7F24E8147600A197EA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7357773225104C6900EAC3C0 /* MemoStorage */,
+				737B1A4F2510460C001812D8 /* MemoStorageType.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -249,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7357773625104C9F00EAC3C0 /* MemoryStorage.swift in Sources */,
 				73215E3124E22FC20063591C /* AppDelegate.swift in Sources */,
+				737B1A502510460C001812D8 /* MemoStorageType.swift in Sources */,
 				73215E3324E22FC20063591C /* SceneDelegate.swift in Sources */,
 				73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */,
 				737B1A4E251044FF001812D8 /* Memo.swift in Sources */,
@@ -397,7 +421,9 @@
 			baseConfigurationReference = 5BF8357D65783B3855401EC6 /* Pods-rxMemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QL44HLLM22;
 				INFOPLIST_FILE = rxMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -405,6 +431,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moon.rxMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -415,7 +442,9 @@
 			baseConfigurationReference = 025F8218DD040F17B0B2ED48 /* Pods-rxMemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QL44HLLM22;
 				INFOPLIST_FILE = rxMemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -423,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.moon.rxMemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
