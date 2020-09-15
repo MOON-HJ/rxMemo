@@ -15,6 +15,9 @@
 		73215E4024E22FC40063591C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3E24E22FC40063591C /* LaunchScreen.storyboard */; };
 		7357772F2510476C00EAC3C0 /* Pods_rxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */; };
 		7357773625104C9F00EAC3C0 /* MemoryStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357773525104C9F00EAC3C0 /* MemoryStorage.swift */; };
+		73577738251051F100EAC3C0 /* MemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73577737251051F100EAC3C0 /* MemoListViewController.swift */; };
+		7357773A2510523100EAC3C0 /* MemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735777392510523100EAC3C0 /* MemoDetailViewController.swift */; };
+		7357773C2510525A00EAC3C0 /* MemoComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7357773B2510525A00EAC3C0 /* MemoComposeViewController.swift */; };
 		737B1A4E251044FF001812D8 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1A4D251044FF001812D8 /* Memo.swift */; };
 		737B1A502510460C001812D8 /* MemoStorageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1A4F2510460C001812D8 /* MemoStorageType.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +34,9 @@
 		73215E3F24E22FC40063591C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73215E4124E22FC40063591C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7357773525104C9F00EAC3C0 /* MemoryStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryStorage.swift; sourceTree = "<group>"; };
+		73577737251051F100EAC3C0 /* MemoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewController.swift; sourceTree = "<group>"; };
+		735777392510523100EAC3C0 /* MemoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailViewController.swift; sourceTree = "<group>"; };
+		7357773B2510525A00EAC3C0 /* MemoComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoComposeViewController.swift; sourceTree = "<group>"; };
 		737B1A4D251044FF001812D8 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		737B1A4F2510460C001812D8 /* MemoStorageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoStorageType.swift; sourceTree = "<group>"; };
 		8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +118,9 @@
 			children = (
 				73215E3624E22FC20063591C /* Main.storyboard */,
 				73215E3E24E22FC40063591C /* LaunchScreen.storyboard */,
+				73577737251051F100EAC3C0 /* MemoListViewController.swift */,
+				735777392510523100EAC3C0 /* MemoDetailViewController.swift */,
+				7357773B2510525A00EAC3C0 /* MemoComposeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -272,10 +281,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7357773625104C9F00EAC3C0 /* MemoryStorage.swift in Sources */,
+				7357773A2510523100EAC3C0 /* MemoDetailViewController.swift in Sources */,
 				73215E3124E22FC20063591C /* AppDelegate.swift in Sources */,
 				737B1A502510460C001812D8 /* MemoStorageType.swift in Sources */,
 				73215E3324E22FC20063591C /* SceneDelegate.swift in Sources */,
 				73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */,
+				73577738251051F100EAC3C0 /* MemoListViewController.swift in Sources */,
+				7357773C2510525A00EAC3C0 /* MemoComposeViewController.swift in Sources */,
 				737B1A4E251044FF001812D8 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
