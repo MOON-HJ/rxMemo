@@ -8,8 +8,9 @@
 
 import UIKit
 
-class MemoComposeViewController: UIViewController {
-
+class MemoComposeViewController: UIViewController, ViewModelBindableType {
+    var viewModel: MemoComposeViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +18,9 @@ class MemoComposeViewController: UIViewController {
     }
     
 
+    func bindViewModel() {
+        
+    }
     /*
     // MARK: - Navigation
 
