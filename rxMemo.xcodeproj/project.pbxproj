@@ -13,6 +13,7 @@
 		73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 73215E3924E22FC20063591C /* rxMemo.xcdatamodeld */; };
 		73215E3D24E22FC40063591C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3C24E22FC40063591C /* Assets.xcassets */; };
 		73215E4024E22FC40063591C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73215E3E24E22FC40063591C /* LaunchScreen.storyboard */; };
+		737B1A4E251044FF001812D8 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 737B1A4D251044FF001812D8 /* Memo.swift */; };
 		BCD629275BB0DDEE32D1EA78 /* Pods_rxMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		73215E3C24E22FC40063591C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73215E3F24E22FC40063591C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73215E4124E22FC40063591C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737B1A4D251044FF001812D8 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		8389F83DE72849CE57CD6AA9 /* Pods_rxMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rxMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 		73C04E7C24E8145600A197EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				737B1A4D251044FF001812D8 /* Memo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				73215E3124E22FC20063591C /* AppDelegate.swift in Sources */,
 				73215E3324E22FC20063591C /* SceneDelegate.swift in Sources */,
 				73215E3B24E22FC20063591C /* rxMemo.xcdatamodeld in Sources */,
+				737B1A4E251044FF001812D8 /* Memo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
