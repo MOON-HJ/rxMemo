@@ -12,10 +12,10 @@ import RxCocoa
 
 class CommonViewModel: NSObject {
     let title : Driver<String>
-    let sceneCoordinator: SceneCoordinatorType
+    let sceneCoordinator: SceneCoordinator
     let storage:MemoStorageType
     
-    init(title: String, sceneCoordinator: SceneCoordinatorType, storage: MemoStorageType) {
+    init(title: String, sceneCoordinator: SceneCoordinator, storage: MemoStorageType) {
         self.title = Observable.just(title).asDriver(onErrorJustReturn: "")
         self.sceneCoordinator = sceneCoordinator
         self.storage = storage
