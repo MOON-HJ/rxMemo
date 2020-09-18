@@ -10,6 +10,12 @@ import Foundation
 import RxSwift
 import RxCocoa
 
+extension UIViewController {
+    var sceneViewController: UIViewController {
+        return self.children.first ?? self
+    }
+}
+
 class SceneCoordinator: SceneCoordinatorType {
     private let bag = DisposeBag()
     
@@ -28,7 +34,7 @@ class SceneCoordinator: SceneCoordinatorType {
         
         switch style {
         case .root:
-            currentVC = target
+            currentVC = target.sceneViewController
             window.rootViewController = target
             subject.onCompleted()
             
@@ -37,15 +43,19 @@ class SceneCoordinator: SceneCoordinatorType {
                 subject.onError(TransitionError.NavigationControllerMissing)
                 break
             }
+            nav.rx.willShow
+                .subscribe(onNext: {[ unowned self ] evt in
+                            self.currentVC = evt.viewController.sceneViewController})
+                .disposed(by: bag)
             
             nav.pushViewController(target, animated: animated)
-            currentVC = target
+            currentVC = target.sceneViewController
             subject.onCompleted()
         case .modal:
             currentVC.present(target, animated: animated) {
                 subject.onCompleted()
             }
-            currentVC = target
+            currentVC = target.sceneViewController
         }
         
         return subject.ignoreElements()
@@ -58,7 +68,7 @@ class SceneCoordinator: SceneCoordinatorType {
         return Completable.create{ [unowned self] completable in
             if let presentingVC = self.currentVC.presentingViewController {
                 self.currentVC.dismiss(animated: animated) {
-                    self.currentVC = presentingVC
+                    self.currentVC = presentingVC.sceneViewController
                     completable(.completed)
                 }
             } else if let nav = self.currentVC.navigationController {
