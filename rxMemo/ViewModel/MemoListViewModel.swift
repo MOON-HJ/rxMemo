@@ -13,7 +13,10 @@ import Action
 
 class MemoListViewModel: CommonViewModel{
     var memoList: Observable<[Memo]> {
-        return storage.memoList()
+        return storage.memoList().map{ (item) -> [Memo] in
+            return item.sorted{ $0.content < $1.content }
+            
+        }
     }
     
     func performUpdate(memo: Memo) -> Action<String, Void> {
