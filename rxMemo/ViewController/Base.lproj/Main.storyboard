@@ -143,6 +143,8 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5Gy-6K-8cr"/>
                                     <barButtonItem systemItem="compose" id="LY1-1Q-kao"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nv2-Fc-O8N"/>
+                                    <barButtonItem systemItem="camera" id="DgN-TY-MRz"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Yd2-c0-RAM"/>
                                     <barButtonItem systemItem="action" id="ro4-29-Cti"/>
                                 </items>
@@ -165,6 +167,7 @@
                     <connections>
                         <outlet property="deleteButton" destination="HQW-vv-eha" id="gaK-4W-f7C"/>
                         <outlet property="editButton" destination="LY1-1Q-kao" id="a4p-R2-Ufb"/>
+                        <outlet property="imageViewButton" destination="DgN-TY-MRz" id="G1u-tp-rWF"/>
                         <outlet property="listTableView" destination="dl7-Jf-oRh" id="wo9-uk-zAU"/>
                         <outlet property="shareButton" destination="ro4-29-Cti" id="kL0-Hj-dk5"/>
                     </connections>
@@ -172,6 +175,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xsp-3B-GyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2511.594202898551" y="111.83035714285714"/>
+        </scene>
+        <!--사진-->
+        <scene sceneID="mT0-e5-Lco">
+            <objects>
+                <viewController id="dgV-rC-Vrd" customClass="MemoImageViewController" customModule="rxMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="imageViewVC" id="YQ6-iA-Wfp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="PfZ-4J-aKv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="사진" id="qah-wr-mhI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rY7-vX-tKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5165.217391304348" y="97.767857142857139"/>
         </scene>
         <!--새 메모-->
         <scene sceneID="LXl-1e-hmu">
@@ -231,6 +250,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4QW-Da-Bs4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1709" y="-561"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3T9-cc-I8n">
+            <objects>
+                <navigationController storyboardIdentifier="imageViewNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YKP-MX-Ax8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CX0-Is-yh5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dgV-rC-Vrd" kind="relationship" relationship="rootViewController" id="HXI-No-6fs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDE-Dt-CxO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4255.072463768116" y="97.767857142857139"/>
         </scene>
     </scenes>
     <resources>

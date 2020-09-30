@@ -21,6 +21,9 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
     
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
+    @IBOutlet weak var imageViewButton: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -53,6 +56,17 @@ class MemoDetailViewController: UIViewController, ViewModelBindableType {
         .disposed(by: rx.disposeBag)
         
         editButton.rx.action = viewModel.makeEditAction()
+        imageViewButton.rx.action = viewModel.imageViewAction()
+//                imageViewButton.rx.action = viewModel.imageViewAction()
+//
+//        imageViewButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance).subscribe(onNext: { [weak self] _ in
+//           _ = self?.viewModel.imageViewAction()
+//        }).disposed(by: rx.disposeBag)
+//
+        
+        
+        
+        
         shareButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .subscribe(onNext: { [weak self]  _ in
                 guard let memo = self?.viewModel.memo.content else { return }
