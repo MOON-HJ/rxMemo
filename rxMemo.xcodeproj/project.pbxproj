@@ -95,9 +95,9 @@
 			children = (
 				73C04E7F24E8147600A197EA /* Service */,
 				73C04E8024E8148000A197EA /* Scene */,
+				73C04E7C24E8145600A197EA /* Model */,
 				73577749251061CB00EAC3C0 /* ViewModel */,
 				73C04E7D24E8146000A197EA /* ViewController */,
-				73C04E7C24E8145600A197EA /* Model */,
 				73215E3024E22FC20063591C /* AppDelegate.swift */,
 				73215E3224E22FC20063591C /* SceneDelegate.swift */,
 				73215E3C24E22FC40063591C /* Assets.xcassets */,
