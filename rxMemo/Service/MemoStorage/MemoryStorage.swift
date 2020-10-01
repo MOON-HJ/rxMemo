@@ -12,8 +12,8 @@ import RxSwift
 class MemoryStorage: MemoStorageType {
     
     private var list = [
-        Memo(content: "Hello RxSwift", insertDate: Date().addingTimeInterval(-10)),
-        Memo(content: "Lorem Ipsum", insertDate: Date().addingTimeInterval(-20))]
+        Memo(content: "Hello RxSwift", insertDate: Date().addingTimeInterval(-10), image:nil),
+        Memo(content: "Lorem Ipsum", insertDate: Date().addingTimeInterval(-20), image: nil)]
     
     private lazy var sectionModel = MemoSelectionModel(model: 0, items: list)
     
@@ -21,7 +21,7 @@ class MemoryStorage: MemoStorageType {
     
     @discardableResult
     func createMemo(content: String) -> Observable<Memo> {
-        let memo = Memo(content: content)
+        let memo = Memo(content: content, image: nil)
         sectionModel.items.insert(memo, at: 0)
         store.onNext([sectionModel])
         
@@ -35,7 +35,7 @@ class MemoryStorage: MemoStorageType {
     
     @discardableResult
     func update(memo: Memo, content: String) -> Observable<Memo> {
-        let updated = Memo(original: memo, updatedContent: content)
+        let updated = Memo(original: memo, updatedContent: content, updatedImage: nil)
         if let index = sectionModel.items.firstIndex(where: {$0 == memo}) {
             sectionModel.items.remove(at: index)
             sectionModel.items.insert(updated, at: index)

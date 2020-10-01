@@ -61,6 +61,16 @@ class MemoDetailViewModel: CommonViewModel{
         }
     }
     
+    func imageViewAction() -> CocoaAction {
+        return CocoaAction { _ in
+            let imageViewModel = MemoImageViewModel(title: "사진", image: self.memo.image, sceneCoordinator: self.sceneCoordinator, storage:  self.storage, saveAction: nil)
+            
+            let imageViewScene = Scene.imageview(imageViewModel)
+            
+            return self.sceneCoordinator.transition(to: imageViewScene, using: .modal, animated: true).asObservable().map{ _ in }
+        }
+    }
+    
     func makeDeleteAction() -> CocoaAction{
         return Action { input in
             self.storage.delete(memo: self.memo)

@@ -12,6 +12,7 @@ enum Scene {
     case list(MemoListViewModel)
     case detail(MemoDetailViewModel)
     case compose(MemoComposeViewModel)
+    case imageview(MemoImageViewModel)
 }
 
 extension Scene {
@@ -47,6 +48,18 @@ extension Scene {
             }
             
             composeVC.bind(viewModel: viewModel)
+            return nav
+            
+        case .imageview(let viewModel):
+            guard let nav = storyboard.instantiateViewController(withIdentifier: "imageViewNav") as? UINavigationController else {
+                fatalError()
+            }
+            
+            guard var imageViewVC = nav.viewControllers.first as? MemoImageViewController else {
+                fatalError()
+            }
+            
+            imageViewVC.bind(viewModel: viewModel)
             return nav
         }
     }
