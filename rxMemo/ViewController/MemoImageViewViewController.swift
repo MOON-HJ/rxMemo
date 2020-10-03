@@ -17,7 +17,7 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
     @IBOutlet weak var editButton: UIBarButtonItem!
     @IBOutlet weak var cancleButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,5 +35,9 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
                         let vc = UIImagePickerController()
                         self?.present(vc, animated: true, completion: nil)
             }).disposed(by: rx.disposeBag)
+        
+        saveButton.rx.tap.throttle(.milliseconds(500), scheduler: MainScheduler.instance)
+            .withLatestFrom(imageView.rx.image)
+            .bind(to: viewModel.saveAction.inputs).disposed(by: rx.disposeBag)
     }
 }
