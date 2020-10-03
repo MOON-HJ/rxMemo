@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class MemoImageViewController: UIViewController, ViewModelBindableType {
-        var viewModel: MemoImageViewModel!
+    var viewModel: MemoImageViewModel!
     
     
     @IBOutlet weak var editButton: UIBarButtonItem!
@@ -19,7 +21,7 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,16 +30,10 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
         viewModel.title.drive(navigationItem.rx.title).disposed(by: rx.disposeBag)
         cancleButton.rx.action = viewModel.cancleAction
         
+        editButton.rx.tap.throttle(.microseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                        let vc = UIImagePickerController()
+                        self?.present(vc, animated: true, completion: nil)
+            }).disposed(by: rx.disposeBag)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

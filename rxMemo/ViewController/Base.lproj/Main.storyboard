@@ -187,6 +187,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="사진" id="qah-wr-mhI">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="ni2-I7-5tY"/>
                         <rightBarButtonItems>
                             <barButtonItem systemItem="save" id="buv-dT-2FO"/>
                             <barButtonItem systemItem="cancel" id="XKP-yz-Mke">
@@ -196,6 +197,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="cancleButton" destination="XKP-yz-Mke" id="FzK-kM-sU9"/>
+                        <outlet property="editButton" destination="ni2-I7-5tY" id="hbZ-VT-rnZ"/>
                         <outlet property="saveButton" destination="buv-dT-2FO" id="vPs-dM-VdL"/>
                     </connections>
                 </viewController>
