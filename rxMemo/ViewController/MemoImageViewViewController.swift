@@ -12,9 +12,9 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
         var viewModel: MemoImageViewModel!
     
     
-    @IBOutlet weak var AddAction: UIBarButtonItem!
-    @IBOutlet weak var CancleAction: UIBarButtonItem!
-    @IBOutlet weak var DoneAction: UIBarButtonItem!
+    @IBOutlet weak var editButton: UIBarButtonItem!
+    @IBOutlet weak var cancleButton: UIBarButtonItem!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
     
     
     override func viewDidLoad() {
@@ -26,7 +26,7 @@ class MemoImageViewController: UIViewController, ViewModelBindableType {
     
     func bindViewModel() {
         viewModel.title.drive(navigationItem.rx.title).disposed(by: rx.disposeBag)
-        
+        cancleButton.rx.action = viewModel.cancleAction
         
     }
     

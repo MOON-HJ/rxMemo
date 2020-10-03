@@ -186,7 +186,18 @@
                         <viewLayoutGuide key="safeArea" id="PfZ-4J-aKv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="사진" id="qah-wr-mhI"/>
+                    <navigationItem key="navigationItem" title="사진" id="qah-wr-mhI">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="save" id="buv-dT-2FO"/>
+                            <barButtonItem systemItem="cancel" id="XKP-yz-Mke">
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancleButton" destination="XKP-yz-Mke" id="FzK-kM-sU9"/>
+                        <outlet property="saveButton" destination="buv-dT-2FO" id="vPs-dM-VdL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rY7-vX-tKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
